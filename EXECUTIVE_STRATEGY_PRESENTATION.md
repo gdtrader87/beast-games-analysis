@@ -1,5 +1,5 @@
 # Executive Strategy Presentation
-## Beast Industries — Analytics-Driven Content Optimization
+## Beast Industries Analytics-Driven Content Optimization
 ### Head of Analytics
 
 ---
@@ -26,7 +26,7 @@ March 2026
 Current Performance and the Opportunity Gap
 
 Current State:
-• 161M average views per video — proven consistency
+• 161M average views per video proven consistency
 • Production decisions: mix of intuition and available data
 • Available data not fully operationalized
 
@@ -126,7 +126,7 @@ Upload Timing: +20% impact
 
 How it works:
 1. Score title against proven formula
-2. Evaluate thumbnail — color, composition, contrast
+2. Evaluate thumbnail color, composition, contrast
 3. Factor guest appearance
 4. Apply upload timing adjustment
 5. Weight by historical performance multipliers
@@ -166,7 +166,7 @@ Secondary impact:
 
 **Slide 9: Revenue Growth Roadmap**
 ```
-+$3–5B Annual Upside — 12-Month Horizon
++$3–5B Annual Upside 12-Month Horizon
 
 Celebrity Guest Strategy: +$600M/year
 ├─ Current: 3 guests per 50 videos (6%)
@@ -259,7 +259,7 @@ Alert thresholds:
 
 Response protocol:
 • Alert to review within 24 hours
-• Diagnosis framework applied — title, thumbnail, timing, content
+• Diagnosis framework applied title, thumbnail, timing, content
 • Course correction implemented within the following production cycle
 
 Outcome: No delayed response to performance decline.
@@ -280,13 +280,13 @@ Month 1 — Foundation:
 └─ Anomaly detection dashboard live
 
 Month 2 — Optimization:
-├─ International localization scoped — Spanish and Hindi priority
+├─ International localization scoped Spanish and Hindi priority
 ├─ Thumbnail testing framework operational
 ├─ Prize structure A/B tests designed and launched
 └─ Real-time monitoring fully integrated
 
 Month 3 — Scale:
-├─ Beast Games: International — first localized episodes in market
+├─ Beast Games: International first localized episodes in market
 ├─ Localization expanded to 5 languages
 ├─ Automated content scoring integrated into approval workflow
 └─ Executive dashboard live with real-time metrics
@@ -355,7 +355,7 @@ Review cadence:
 Current State vs Optimized State
 
 Current:
-• 15% YoY growth — solid but not compounding
+• 15% YoY growth solid but not compounding
 • Decision mix: ~70% intuition, ~30% data
 • $3–5B in quantified upside not being captured
 
@@ -363,7 +363,7 @@ With Analytics Leadership:
 • Decision mix inverted: 70% data, 30% judgment
 • Growth trajectory: 25%+ (vs 15%)
 • Upside captured: +$3–5B annually
-• Risk profile: Reduced — predictive model flags issues before they compound
+• Risk profile: Reduced predictive model flags issues before they compound
 
 Industry precedent:
 • Amazon: Analytics function drives ~40% of measurable value creation
@@ -485,7 +485,7 @@ Objective: Build the analytics function that scales Beast Industries to $15B+
 ### Key Points to Land
 1. "Beast Games is already performing at 161M views consistently — the opportunity is making that floor higher and more predictable, not starting from scratch."
 2. "The cost savings alone cover the team budget within the first month. Everything beyond that is upside."
-3. "This is based on 150 of your actual videos — not theoretical modeling."
+3. "This is based on 150 of your actual videos not theoretical modeling."
 4. "The 90-day plan is ready to execute. The analysis is done. What's needed now is access and alignment."
 
 ### Handling Likely Questions
@@ -500,7 +500,7 @@ Consultants deliver recommendations and leave. This role requires someone who ow
 The protocol is to pause greenlight recommendations and use the model for directional insight only while recalibrating. Weekly accuracy tracking is built into the operating cadence. Drift is caught early.
 
 **"What's the single biggest risk?"**
-Adoption. The model is only valuable if the production team uses it. That's a change management problem, not a technical one — and it's addressed in the 90-day plan with training, tooling, and early wins built in.
+Adoption. The model is only valuable if the production team uses it. That's a change management problem, not a technical one and it's addressed in the 90-day plan with training, tooling, and early wins built in.
 
 ---
 
