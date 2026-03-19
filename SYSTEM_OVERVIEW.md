@@ -1,4 +1,4 @@
-# Beast Games Analytics — System Overview
+# Beast Games Analytics System Overview
 
 A data-driven content strategy system for Beast Industries that predicts video performance before launch, identifies optimization opportunities across title, thumbnail, and timing, and benchmarks channel performance against competitors all grounded in real YouTube data.
 
@@ -41,7 +41,7 @@ A data-driven content strategy system for Beast Industries that predicts video p
 
 ### 3. Competitive Benchmarking (`competitive_analysis.py`)
 ```
-├─ MrBeast vs. competitors — quantified performance gap
+├─ MrBeast vs. competitors quantified performance gap
 ├─ Statistical significance (t-test, p < 0.05)
 ├─ Engagement rate comparison
 └─ Content strategy pattern analysis
