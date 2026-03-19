@@ -4,13 +4,13 @@
 
 # Beast Games Analytics Portfolio
 
-**Senior Manager, YouTube Intelligence:** Umair Tareen | [LinkedIn](https://www.linkedin.com/in/umairtareen/) | [GitHub](https://github.com/gdtrader87)
+**Senior Manager Data & Analytics Leader:** Umair Tareen | [LinkedIn](https://www.linkedin.com/in/umairtareen/) | [GitHub](https://github.com/gdtrader87)
 
 ---
 
 ## Project Overview
 
-Beast Games is MrBeast's flagship entertainment show on Amazon Prime — the largest reality competition in YouTube history with 1,000 contestants and a $5M prize. This analysis identifies the data patterns behind its success by examining:
+Beast Games is MrBeast's flagship entertainment show on Amazon Prime the largest reality competition in YouTube history with 1,000 contestants and a $5M prize. This analysis identifies the data patterns behind its success by examining:
 
 - **Thumbnail design** — Color psychology, composition, CTR impact
 - **Title optimization** — Keywords, sentiment, urgency signals
@@ -146,4 +146,4 @@ This portfolio was built to demonstrate applied YouTube intelligence capabilitie
 
 ---
 
-*Built by Umair Tareen — Senior Data & Analytics Leader*
+*Built by Umair Tareen — Senior Manager Data & Analytics Leader*
