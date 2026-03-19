@@ -1,6 +1,6 @@
 # BeastBet Live: Prediction Markets for Beast Games
 
-A production-ready prediction market system built for Beast Games — covering the core engine, interactive dashboard, market intelligence, and the full business case for a $250M–$510M revenue opportunity.
+A production-ready prediction market system built for Beast Games covering the core engine, interactive dashboard, market intelligence, and the full business case for a $250M–$510M revenue opportunity.
 
 ---
 
@@ -67,7 +67,7 @@ BeastBet Live is a complete revenue layer for Beast Games. It addresses a struct
 
 | Module | Description |
 |--------|-------------|
-| `fetch_youtube_data.py` | YouTube API integration — real channel metrics |
+| `fetch_youtube_data.py` | YouTube API integration | real channel metrics |
 | `ab_testing.py` | A/B testing framework, 92% model accuracy |
 | `competitive_analysis.py` | Competitor benchmarking |
 | `anomaly_detection.py` | Real-time performance monitoring |
@@ -169,7 +169,7 @@ bet = market.place_bet(
     contestant_id="contestant_alpha",
     amount=Decimal("50.00")
 )
-# Returns: Bet object — odds_at_placement=4.00, potential payout=$200
+# Returns: Bet object odds_at_placement=4.00, potential payout=$200
 
 # Settle after event
 market.settle_bet(bet.id, won=True)
@@ -247,7 +247,7 @@ report = analyzer.generate_analysis_report(market_data, market_object)
 | EBITDA | $170M | $267M |
 | EBITDA Margin | 68% | 71% |
 
-Software-model economics with network effects — gross margins scale to 85%+ at full deployment.
+Software-model economics with network effects gross margins scale to 85%+ at full deployment.
 
 ---
 
