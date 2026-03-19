@@ -77,7 +77,7 @@ YouTubeDataFetcher
 1. Initialize with YouTube API key (OAuth 2.0)
 2. Query channels endpoint → retrieve uploads playlist ID
 3. Fetch 50 most recent videos
-4. Retrieve statistics — views, likes, comments
+4. Retrieve statistics views, likes, comments
 5. Cache locally as JSON
 
 **Rate limiting:**
@@ -281,9 +281,9 @@ Significance level: α = 0.05
    ├─ classify_title_formula()
    │  └─ "urgency_prize_stakes" best performing category
    ├─ classify_thumbnails()
-   │  └─ "bright_red" — +25% CTR vs baseline
+   │  └─ "bright_red" +25% CTR vs baseline
    ├─ group_by_upload_timing()
-   │  └─ "thursday_evening" — +20% views
+   │  └─ "thursday_evening" +20% views
    └─ has_guest=true → 2.5x multiplier applied
 
 4. Prediction
@@ -395,7 +395,7 @@ test_predictions_vs_actual()
 
 ## Security and Compliance
 
-- API key management via environment variables — not hardcoded
+- API key management via environment variables not hardcoded
 - Data privacy — public YouTube metrics only, no private user data
 - Rate limiting compliance — usage stays within 10K unit daily quota
 - Error handling — graceful failures, no data leakage on exception
