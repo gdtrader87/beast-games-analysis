@@ -1,3 +1,7 @@
+## 🪙 [▶ Live BeastBet Demo](https://gdtrader87.github.io/beast-games-analysis/)
+
+> Polymarket × Beast Games prediction market concept — click to see the live arcade UI
+
 # Beast Games Analytics Portfolio
 
 # Beast Games YouTube Analytics Portfolio
