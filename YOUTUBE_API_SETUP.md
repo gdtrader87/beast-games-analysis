@@ -40,7 +40,6 @@ python3 fetch_youtube_data.py
 This will:
 - Fetch data from @MrBeast (UCX6OQ3DkcsbYNE6H8uQQuVA)
 - Fetch data from @MrBeast2 (UC4-79UOlP48-QNGgCko5p2g)
-- Fetch data from MrBeast Gaming (UCIPPMRA040LQr5QPyJEbmXA)
 - Analyze title patterns, upload frequency, engagement
 - Save raw data to `data/youtube_data.json`
 
