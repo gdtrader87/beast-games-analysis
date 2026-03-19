@@ -133,7 +133,7 @@ Expected output: Real YouTube metrics loaded with field names.
 - [x] Financial models documented
 - [x] Team structure and 90-day plan defined
 - [x] Repository publicly accessible
-- [x] All commits pushed — no local-only changes
+- [x] All commits pushed no local-only changes
 
 ---
 
