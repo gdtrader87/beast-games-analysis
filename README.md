@@ -4,8 +4,8 @@
 
 ---
 
-## 🪙 [▶ Live BeastBet Demo](https://gdtrader87.github.io/beast-games-analysis/)
-> Polymarket × Beast Games prediction market concept — click to see the live arcade UI
+## 🪙 [▶ Live BeastBet Demo](https://gdtrader87.github.io/beast-games-analysis/) &nbsp;|&nbsp; 📊 [▶ View Pitch Deck](https://gdtrader87.github.io/beast-games-analysis/pitch.html)
+> Polymarket × Beast Games prediction market · 10-slide analytics pitch deck — no code required
 
 ---
 

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Beast Games Analytics — Pitch Deck</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --purple:  #a855f7;
+    --purple2: #7c3aed;
+    --gold:    #FFD700;
+    --green:   #22c55e;
+    --red:     #ef4444;
+    --blue:    #60a5fa;
+    --bg:      #06040f;
+    --card:    #0f0a1e;
+    --border:  #1e1040;
+    --text:    #e9d5ff;
+    --muted:   #6b7280;
+  }
+
+  html, body { width: 100%; height: 100%; overflow: hidden; background: var(--bg); }
+
+  /* ── Slide engine ── */
+  .deck { width: 100vw; height: 100vh; position: relative; }
+
+  .slide {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    padding: 52px 72px;
+    opacity: 0; pointer-events: none;
+    transform: translateX(40px);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--text);
+  }
+  .slide.active {
+    opacity: 1; pointer-events: all; transform: translateX(0);
+  }
+  .slide.exit {
+    opacity: 0; transform: translateX(-40px);
+  }
+
+  /* ── Nav ── */
+  .nav {
+    position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%);
+    display: flex; align-items: center; gap: 16px; z-index: 100;
+  }
+  .nav button {
+    background: rgba(168,85,247,0.18); border: 1px solid var(--purple);
+    color: var(--purple); padding: 8px 20px; border-radius: 6px;
+    font-size: 13px; cursor: pointer; letter-spacing: 1px;
+    transition: background 0.15s;
+  }
+  .nav button:hover { background: rgba(168,85,247,0.35); }
+  .nav button:disabled { opacity: 0.3; cursor: default; }
+  .slide-counter { font-size: 12px; color: var(--muted); letter-spacing: 2px; min-width: 60px; text-align: center; }
+
+  /* ── Progress bar ── */
+  .progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--purple2), var(--purple), var(--gold)); transition: width 0.4s ease; z-index: 100; }
+
+  /* ── Slide-specific layouts ── */
+
+  /* Cover */
+  .cover { text-align: center; }
+  @keyframes gradPulse {
+    0%,100% { background-position: 0% 50%; }
+    50%      { background-position: 100% 50%; }
+  }
+  .cover-badge {
+    font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
+    color: var(--purple); border: 1px solid var(--purple);
+    padding: 5px 16px; border-radius: 20px; margin-bottom: 28px;
+    display: inline-block;
+  }
+  .cover h1 {
+    font-size: 54px; font-weight: 900; line-height: 1.1;
+    background: linear-gradient(135deg, #fff 0%, var(--purple) 50%, var(--gold) 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    animation: gradPulse 5s ease infinite;
+    margin-bottom: 16px;
+  }
+  .cover-sub { font-size: 18px; color: #9ca3af; margin-bottom: 36px; }
+  .cover-author {
+    font-size: 14px; color: var(--text);
+    display: flex; align-items: center; justify-content: center; gap: 20px;
+  }
+  .cover-author a { color: var(--purple); text-decoration: none; }
+  .cover-author a:hover { text-decoration: underline; }
+  .cover-divider { color: var(--border); }
+
+  /* Section header */
+  .section-slide { text-align: center; }
+  .section-num { font-size: 80px; font-weight: 900; color: var(--border); line-height: 1; margin-bottom: 8px; }
+  .section-title { font-size: 42px; font-weight: 800; color: var(--purple); }
+  .section-sub { font-size: 16px; color: var(--muted); margin-top: 10px; }
+
+  /* Standard content */
+  .slide h2 { font-size: 30px; font-weight: 800; margin-bottom: 28px; }
+  .slide h2 .accent { color: var(--purple); }
+  .slide h2 .gold   { color: var(--gold); }
+
+  /* Two-column */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; width: 100%; }
+  .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; width: 100%; }
+
+  /* Stat card */
+  .stat-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 24px 20px; text-align: center;
+  }
+  .stat-card.purple { border-color: rgba(168,85,247,0.5); }
+  .stat-card.gold   { border-color: rgba(255,215,0,0.4); }
+  .stat-card.green  { border-color: rgba(34,197,94,0.4); }
+  .stat-card.blue   { border-color: rgba(96,165,250,0.4); }
+  .stat-card.red    { border-color: rgba(239,68,68,0.4); }
+  .stat-val { font-size: 36px; font-weight: 900; line-height: 1; }
+  .stat-val.purple { color: var(--purple); }
+  .stat-val.gold   { color: var(--gold); }
+  .stat-val.green  { color: var(--green); }
+  .stat-val.blue   { color: var(--blue); }
+  .stat-val.red    { color: var(--red); }
+  .stat-label { font-size: 12px; color: var(--muted); margin-top: 8px; letter-spacing: 1px; text-transform: uppercase; }
+  .stat-sub   { font-size: 11px; color: #4b5563; margin-top: 4px; }
+
+  /* Bullet list */
+  .bullets { list-style: none; width: 100%; }
+  .bullets li {
+    padding: 12px 16px; border-left: 3px solid var(--purple);
+    background: var(--card); border-radius: 0 8px 8px 0;
+    margin-bottom: 10px; font-size: 15px; line-height: 1.5;
+    display: flex; align-items: flex-start; gap: 12px;
+  }
+  .bullets li .icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+  .bullets li strong { color: white; }
+
+  /* Panel */
+  .panel {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 24px; width: 100%;
+  }
+  .panel-title { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--purple); margin-bottom: 16px; }
+
+  /* Finding row */
+  .finding {
+    display: flex; align-items: center; gap: 16px;
+    padding: 14px 0; border-bottom: 1px solid var(--border);
+  }
+  .finding:last-child { border-bottom: none; }
+  .finding-num { font-size: 28px; font-weight: 900; color: var(--purple); width: 48px; flex-shrink: 0; }
+  .finding-text { flex: 1; font-size: 14px; line-height: 1.5; }
+  .finding-text strong { color: white; }
+  .finding-badge {
+    font-size: 11px; padding: 3px 10px; border-radius: 20px;
+    background: rgba(168,85,247,0.2); color: var(--purple);
+    border: 1px solid rgba(168,85,247,0.3); white-space: nowrap;
+  }
+  .finding-badge.green { background: rgba(34,197,94,0.15); color: var(--green); border-color: rgba(34,197,94,0.3); }
+  .finding-badge.gold  { background: rgba(255,215,0,0.15);  color: var(--gold);  border-color: rgba(255,215,0,0.3); }
+
+  /* Quadrant */
+  .quadrant-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; gap: 12px; width: 100%;
+  }
+  .quad {
+    border-radius: 12px; padding: 18px; min-height: 110px;
+    display: flex; flex-direction: column; justify-content: flex-end;
+  }
+  .quad-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
+  .quad-types { font-size: 12px; opacity: 0.7; }
+  .quad.dd { background: rgba(34,197,94,0.12); border: 1px solid rgba(34,197,94,0.3); }
+  .quad.dd .quad-label { color: var(--green); }
+  .quad.su { background: rgba(168,85,247,0.12); border: 1px solid rgba(168,85,247,0.3); }
+  .quad.su .quad-label { color: var(--purple); }
+  .quad.hg { background: rgba(255,215,0,0.10); border: 1px solid rgba(255,215,0,0.25); }
+  .quad.hg .quad-label { color: var(--gold); }
+  .quad.rt { background: rgba(239,68,68,0.10); border: 1px solid rgba(239,68,68,0.25); }
+  .quad.rt .quad-label { color: var(--red); }
+  .quad-axis-x {
+    text-align: center; font-size: 10px; color: var(--muted);
+    letter-spacing: 2px; margin-top: 6px; text-transform: uppercase;
+  }
+
+  /* Pipeline */
+  .pipeline {
+    display: flex; align-items: center; justify-content: center;
+    gap: 0; width: 100%; margin: 12px 0;
+  }
+  .pipe-node {
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+  }
+  .pipe-circle {
+    width: 60px; height: 60px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; border: 2px solid;
+  }
+  .pipe-label { font-size: 9px; letter-spacing: 1px; text-transform: uppercase; }
+  .pipe-arrow { font-size: 20px; color: var(--border); padding: 0 8px; margin-bottom: 14px; }
+  .pn-a .pipe-circle { background: rgba(99,102,241,0.15); border-color: #6366f1; }
+  .pn-a .pipe-label  { color: #818cf8; }
+  .pn-b .pipe-circle { background: rgba(249,115,22,0.15); border-color: #f97316; }
+  .pn-b .pipe-label  { color: #fb923c; }
+  .pn-c .pipe-circle { background: rgba(234,179,8,0.15);  border-color: #eab308; }
+  .pn-c .pipe-label  { color: #facc15; }
+  .pn-d .pipe-circle { background: rgba(34,197,94,0.15);  border-color: #22c55e; }
+  .pn-d .pipe-label  { color: #4ade80; }
+  .pn-e .pipe-circle { background: rgba(236,72,153,0.15); border-color: #ec4899; }
+  .pn-e .pipe-label  { color: #f472b6; }
+
+  /* CTA slide */
+  .cta-links { display: flex; gap: 16px; margin-top: 24px; flex-wrap: wrap; justify-content: center; }
+  .cta-btn {
+    padding: 12px 28px; border-radius: 8px; font-size: 14px;
+    font-weight: 700; letter-spacing: 1px; text-decoration: none;
+    transition: opacity 0.15s;
+  }
+  .cta-btn:hover { opacity: 0.85; }
+  .cta-btn.primary { background: var(--purple); color: white; }
+  .cta-btn.secondary { background: transparent; border: 2px solid var(--purple); color: var(--purple); }
+  .cta-btn.gold-btn  { background: var(--gold); color: #000; }
+
+  /* Keyword cloud (static) */
+  .word-cloud {
+    display: flex; flex-wrap: wrap; gap: 10px 14px;
+    justify-content: center; align-items: center;
+    padding: 12px; max-width: 640px;
+  }
+  .wc-word { cursor: default; font-weight: 700; transition: opacity 0.15s; }
+  .wc-word:hover { opacity: 0.7; }
+
+  /* Table */
+  .data-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .data-table th { background: rgba(168,85,247,0.2); color: var(--purple); padding: 9px 14px; text-align: left; letter-spacing: 1px; text-transform: uppercase; font-size: 11px; }
+  .data-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table tr:hover td { background: rgba(168,85,247,0.05); }
+
+  /* Slide bg accents */
+  .bg-circle {
+    position: absolute; border-radius: 50%; pointer-events: none;
+    filter: blur(80px); opacity: 0.06; z-index: 0;
+  }
+  .slide > * { position: relative; z-index: 1; }
+
+  /* Pill */
+  .pill {
+    display: inline-block; padding: 3px 12px; border-radius: 20px;
+    font-size: 11px; font-weight: 700; letter-spacing: 1px;
+  }
+  .pill.green  { background: rgba(34,197,94,0.2);  color: var(--green); }
+  .pill.purple { background: rgba(168,85,247,0.2); color: var(--purple); }
+  .pill.gold   { background: rgba(255,215,0,0.2);  color: var(--gold); }
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<div class="deck" id="deck">
+
+  <!-- ── SLIDE 1: Cover ── -->
+  <div class="slide cover active" id="s0">
+    <div class="bg-circle" style="width:500px;height:500px;background:#7c3aed;top:-100px;right:-100px;"></div>
+    <div class="bg-circle" style="width:300px;height:300px;background:#FFD700;bottom:-80px;left:-60px;"></div>
+    <div class="cover-badge">Beast Industries · Analytics Case</div>
+    <h1>Beast Games<br>Analytics</h1>
+    <div class="cover-sub">Data-driven content strategy across YouTube, Amazon Prime &amp; beyond</div>
+    <div class="cover-author">
+      <span>Umair Tareen</span>
+      <span class="cover-divider">|</span>
+      <span>Senior Manager, Data &amp; Analytics</span>
+      <span class="cover-divider">|</span>
+      <a href="https://www.linkedin.com/in/umairtareen/" target="_blank">LinkedIn</a>
+      <span class="cover-divider">|</span>
+      <a href="https://github.com/gdtrader87/beast-games-analysis" target="_blank">GitHub</a>
+    </div>
+  </div>
+
+  <!-- ── SLIDE 2: The Empire ── -->
+  <div class="slide" id="s1">
+    <div class="bg-circle" style="width:400px;height:400px;background:#7c3aed;top:-60px;left:-80px;"></div>
+    <h2>The <span class="accent">MrBeast</span> Empire</h2>
+    <div class="three-col" style="margin-bottom:24px;">
+      <div class="stat-card purple">
+        <div class="stat-val purple">471M</div>
+        <div class="stat-label">Subscribers</div>
+        <div class="stat-sub">Main channel</div>
+      </div>
+      <div class="stat-card gold">
+        <div class="stat-val gold">114.5B</div>
+        <div class="stat-label">Total Views</div>
+        <div class="stat-sub">Across all channels</div>
+      </div>
+      <div class="stat-card green">
+        <div class="stat-val green">161M</div>
+        <div class="stat-label">Avg Views/Video</div>
+        <div class="stat-sub">Last 10 uploads</div>
+      </div>
+    </div>
+    <div class="three-col">
+      <div class="stat-card blue">
+        <div class="stat-val blue">52.3M</div>
+        <div class="stat-label">Prime Viewers</div>
+        <div class="stat-sub">Beast Games S2 total</div>
+      </div>
+      <div class="stat-card gold">
+        <div class="stat-val gold">8.4</div>
+        <div class="stat-label">IMDb Rating</div>
+        <div class="stat-sub">94% Rotten Tomatoes</div>
+      </div>
+      <div class="stat-card purple">
+        <div class="stat-val purple">3</div>
+        <div class="stat-label">Active Channels</div>
+        <div class="stat-sub">537M combined subs</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SLIDE 3: What Drives Views? ── -->
+  <div class="slide" id="s2">
+    <div class="bg-circle" style="width:350px;height:350px;background:#a855f7;bottom:-80px;right:-60px;"></div>
+    <h2>What Actually <span class="accent">Drives Views?</span></h2>
+    <div style="width:100%;">
+      <div class="finding">
+        <div class="finding-num">01</div>
+        <div class="finding-text"><strong>Title formula</strong> — "Urgency + $Prize + Stakes" structure drives +31% CTR lift vs. non-prize titles across all 30 videos analyzed</div>
+        <span class="finding-badge gold">+31% CTR</span>
+      </div>
+      <div class="finding">
+        <div class="finding-num">02</div>
+        <div class="finding-text"><strong>Guest episodes</strong> — celebrity collabs average 2.1× the views of solo content (199M vs 96M avg); data consistent across channels</div>
+        <span class="finding-badge green">2.1× views</span>
+      </div>
+      <div class="finding">
+        <div class="finding-num">03</div>
+        <div class="finding-text"><strong>Duration sweet spot</strong> — top-5 performing videos all cluster in the 30–35 min window; shorter and longer both underperform</div>
+        <span class="finding-badge">30–35 min</span>
+      </div>
+      <div class="finding">
+        <div class="finding-num">04</div>
+        <div class="finding-text"><strong>Thumbnail color</strong> — Bright Red outperforms neutral tones by 22% CTR; confirmed across A/B analysis of 30 recent uploads</div>
+        <span class="finding-badge green">+22% CTR</span>
+      </div>
+      <div class="finding">
+        <div class="finding-num">05</div>
+        <div class="finding-text"><strong>Retention cliff</strong> — average 34% drop-off at the 14–16 minute mark; editing pace must accelerate here to hold audience</div>
+        <span class="finding-badge" style="background:rgba(239,68,68,0.15);color:#ef4444;border-color:rgba(239,68,68,0.3);">⚠ 14–16 min</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SLIDE 4: Word Impact Cloud ── -->
+  <div class="slide" id="s3">
+    <div class="bg-circle" style="width:400px;height:400px;background:#7c3aed;top:-100px;right:-60px;"></div>
+    <h2>Title <span class="accent">Word Impact</span> — Bigger = More Views</h2>
+    <div class="word-cloud">
+      <span class="wc-word" style="font-size:46px;color:#FFD700;">$PRIZE</span>
+      <span class="wc-word" style="font-size:38px;color:#a855f7;">Beast</span>
+      <span class="wc-word" style="font-size:34px;color:#a855f7;">Games</span>
+      <span class="wc-word" style="font-size:30px;color:#60a5fa;">Million</span>
+      <span class="wc-word" style="font-size:28px;color:#f97316;">Last</span>
+      <span class="wc-word" style="font-size:26px;color:#a855f7;">Final</span>
+      <span class="wc-word" style="font-size:24px;color:#60a5fa;">Win</span>
+      <span class="wc-word" style="font-size:22px;color:#6b7280;">Survive</span>
+      <span class="wc-word" style="font-size:20px;color:#6b7280;">Challenge</span>
+      <span class="wc-word" style="font-size:20px;color:#a855f7;">Celebrity</span>
+      <span class="wc-word" style="font-size:18px;color:#6b7280;">World</span>
+      <span class="wc-word" style="font-size:18px;color:#6b7280;">Days</span>
+      <span class="wc-word" style="font-size:16px;color:#4b5563;">Record</span>
+      <span class="wc-word" style="font-size:16px;color:#4b5563;">Hidden</span>
+      <span class="wc-word" style="font-size:15px;color:#4b5563;">Ages</span>
+      <span class="wc-word" style="font-size:14px;color:#374151;">Rebuilt</span>
+      <span class="wc-word" style="font-size:14px;color:#374151;">Feeding</span>
+    </div>
+    <div style="margin-top:16px;display:flex;gap:20px;justify-content:center;">
+      <span class="pill gold">Gold = highest impact</span>
+      <span class="pill purple">Purple = strong signal</span>
+      <span class="pill" style="background:rgba(96,165,250,0.15);color:#60a5fa;">Blue = moderate</span>
+    </div>
+  </div>
+
+  <!-- ── SLIDE 5: Content Opportunity Matrix ── -->
+  <div class="slide" id="s4">
+    <div class="bg-circle" style="width:380px;height:380px;background:#22c55e;bottom:-100px;left:-60px;"></div>
+    <h2>Content <span class="accent">Opportunity Matrix</span></h2>
+    <div style="display:flex;gap:24px;width:100%;align-items:flex-start;">
+      <div style="flex:1;">
+        <div style="font-size:10px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;text-align:right;margin-bottom:4px;">↑ HIGH VIEWS</div>
+        <div class="quadrant-grid">
+          <div class="quad su">
+            <div class="quad-label">🚀 Scale Up</div>
+            <div class="quad-types">Extreme / Stunt<br>World Record</div>
+          </div>
+          <div class="quad dd">
+            <div class="quad-label">✅ Double Down</div>
+            <div class="quad-types">Competition<br>Celebrity Collab</div>
+          </div>
+          <div class="quad rt">
+            <div class="quad-label">🔄 Rethink</div>
+            <div class="quad-types">Food / Feastables<br>Gaming</div>
+          </div>
+          <div class="quad hg">
+            <div class="quad-label">💎 Hidden Gem</div>
+            <div class="quad-types">Charity · Environmental<br>3.8% engagement rate</div>
+          </div>
+        </div>
+        <div class="quad-axis-x">← LOW ENGAGEMENT &nbsp;&nbsp;&nbsp; HIGH ENGAGEMENT →</div>
+      </div>
+      <div style="flex:1;">
+        <ul class="bullets">
+          <li><span class="icon">✅</span><div><strong>Double Down:</strong> Competition (Beast Games) episodes average 284M views — highest format by far</div></li>
+          <li><span class="icon">💎</span><div><strong>Hidden Gem:</strong> Beast Philanthropy's 3.8% engagement rate is 2.5× the main channel — underleveraged</div></li>
+          <li><span class="icon">🔄</span><div><strong>Rethink:</strong> Food/Gaming formats average 45M views — lowest ROI on production spend</div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SLIDE 6: Amazon Prime ── -->
+  <div class="slide" id="s5">
+    <div class="bg-circle" style="width:400px;height:400px;background:#60a5fa;top:-80px;right:-80px;"></div>
+    <h2>Amazon Prime <span class="accent">Intelligence</span></h2>
+    <div class="two-col">
+      <div>
+        <div class="three-col" style="grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px;">
+          <div class="stat-card blue">
+            <div class="stat-val blue">8.5M</div>
+            <div class="stat-label">Premiere Viewers</div>
+          </div>
+          <div class="stat-card green">
+            <div class="stat-val green">78%</div>
+            <div class="stat-label">Season Completion</div>
+          </div>
+          <div class="stat-card purple">
+            <div class="stat-val purple">84%</div>
+            <div class="stat-label">Return Viewers</div>
+          </div>
+          <div class="stat-card gold">
+            <div class="stat-val gold">9.2M</div>
+            <div class="stat-label">Finale Viewers</div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-title">Device Split</div>
+          <div style="font-size:13px;line-height:2;">
+            📺 Smart TV &nbsp;&nbsp; <strong>38%</strong><br>
+            📱 Mobile &nbsp;&nbsp;&nbsp;&nbsp; <strong>31%</strong><br>
+            💻 Desktop &nbsp;&nbsp; <strong>18%</strong><br>
+            📟 Tablet &nbsp;&nbsp;&nbsp;&nbsp; <strong>9%</strong>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="panel" style="height:100%;">
+          <div class="panel-title">Top Markets by Viewers</div>
+          <table class="data-table">
+            <tr><th>Market</th><th>Viewers</th></tr>
+            <tr><td>🇺🇸 United States</td><td style="color:var(--gold);font-weight:700;">28.4M</td></tr>
+            <tr><td>🇬🇧 United Kingdom</td><td style="color:var(--blue);">6.8M</td></tr>
+            <tr><td>🇨🇦 Canada</td><td style="color:var(--blue);">5.2M</td></tr>
+            <tr><td>🇦🇺 Australia</td><td style="color:var(--purple);">3.9M</td></tr>
+            <tr><td>🇮🇳 India</td><td style="color:var(--purple);">3.1M</td></tr>
+            <tr><td>🌍 Other Markets</td><td style="color:var(--muted);">4.9M</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SLIDE 7: BeastBet ── -->
+  <div class="slide" id="s6">
+    <div class="bg-circle" style="width:500px;height:500px;background:#FFD700;opacity:0.04;top:-100px;left:50%;transform:translateX(-50%);"></div>
+    <h2>🪙 <span class="gold">BeastBet</span> — The $50M Opportunity</h2>
+    <div class="two-col">
+      <div>
+        <ul class="bullets">
+          <li><span class="icon">⚡</span><div><strong>Polymarket model</strong> — fans buy shares on who survives each Beast Games elimination. Odds update live as episodes drop on Prime.</div></li>
+          <li><span class="icon">💰</span><div><strong>Revenue = 5% rake</strong> on all volume. No gambling license required — structured as skill-based prediction market.</div></li>
+          <li><span class="icon">🎮</span><div><strong>1,000 contestants</strong> × millions of fans = 10× the natural market depth of any comparable show.</div></li>
+          <li><span class="icon">🤝</span><div><strong>Brand upside</strong> — sponsored prediction markets (e.g., "Feastables presents: who finishes last?") add sponsorship revenue layer.</div></li>
+        </ul>
+      </div>
+      <div>
+        <div class="three-col" style="grid-template-columns:1fr 1fr;gap:14px;">
+          <div class="stat-card gold">
+            <div class="stat-val gold">$50M+</div>
+            <div class="stat-label">Projected Volume</div>
+            <div class="stat-sub">Season 3</div>
+          </div>
+          <div class="stat-card green">
+            <div class="stat-val green">$2.5M</div>
+            <div class="stat-label">Net Rake (5%)</div>
+            <div class="stat-sub">Before brand deals</div>
+          </div>
+          <div class="stat-card purple">
+            <div class="stat-val purple">&lt;1mo</div>
+            <div class="stat-label">Payback Period</div>
+            <div class="stat-sub">On build cost</div>
+          </div>
+          <div class="stat-card blue">
+            <div class="stat-val blue">84%</div>
+            <div class="stat-label">Return Viewers</div>
+            <div class="stat-sub">Natural bettor pool</div>
+          </div>
+        </div>
+        <div class="panel" style="margin-top:14px;text-align:center;">
+          <div class="panel-title">Live Demo</div>
+          <a href="https://gdtrader87.github.io/beast-games-analysis/" target="_blank" style="color:var(--gold);font-weight:700;font-size:13px;text-decoration:none;">▶ gdtrader87.github.io/beast-games-analysis</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SLIDE 8: Ops Loop ── -->
+  <div class="slide" id="s7">
+    <div class="bg-circle" style="width:400px;height:400px;background:#a855f7;bottom:-80px;right:-60px;"></div>
+    <h2>Closing the <span class="accent">Loop</span> — Insight → Impact</h2>
+    <div class="pipeline" style="margin:20px 0 8px;">
+      <div class="pipe-node pn-a">
+        <div class="pipe-circle">📊</div>
+        <div class="pipe-label">Analytics</div>
+      </div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-node pn-b">
+        <div class="pipe-circle">💡</div>
+        <div class="pipe-label">Ideation</div>
+      </div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-node pn-c">
+        <div class="pipe-circle">🖼</div>
+        <div class="pipe-label">Thumbnails</div>
+      </div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-node pn-d">
+        <div class="pipe-circle">🎬</div>
+        <div class="pipe-label">Production</div>
+      </div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-node pn-e">
+        <div class="pipe-circle">✂️</div>
+        <div class="pipe-label">Editing</div>
+      </div>
+    </div>
+    <div style="text-align:center;font-size:10px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;">↑ measurable impact loops back to analytics ↑</div>
+    <div class="three-col">
+      <div class="stat-card green">
+        <div class="stat-val green">7</div>
+        <div class="stat-label">Insights Shipped</div>
+        <div class="stat-sub">This cycle</div>
+      </div>
+      <div class="stat-card purple">
+        <div class="stat-val purple">50%</div>
+        <div class="stat-label">Adoption Rate</div>
+        <div class="stat-sub">Target: 80%</div>
+      </div>
+      <div class="stat-card gold">
+        <div class="stat-val gold">+31%</div>
+        <div class="stat-label">Avg View Lift</div>
+        <div class="stat-sub">Shipped insights</div>
+      </div>
+    </div>
+    <div style="margin-top:16px;font-size:13px;color:var(--muted);text-align:center;max-width:600px;">
+      Every insight has an owner, a deadline, and a success metric.<br>
+      Weekly sync: Analytics reviews shipped insights against live performance data.
+    </div>
+  </div>
+
+  <!-- ── SLIDE 9: What I'd Own ── -->
+  <div class="slide" id="s8">
+    <div class="bg-circle" style="width:400px;height:400px;background:#7c3aed;top:-60px;left:-80px;"></div>
+    <h2>What I'd <span class="accent">Own</span> in This Role</h2>
+    <div class="two-col">
+      <ul class="bullets">
+        <li><span class="icon">📊</span><div><strong>YouTube Intelligence</strong> — define the metrics that matter, build dashboards teams actually use, and surface weekly insights before stand-ups</div></li>
+        <li><span class="icon">🔄</span><div><strong>Feedback Loop</strong> — close the gap between analytics and production; track adoption of every recommendation to measurable creative impact</div></li>
+        <li><span class="icon">🔮</span><div><strong>Predictive Modeling</strong> — content opportunity scoring, trend velocity signals (Reddit/TikTok/X), format ROI ranking before shoot days</div></li>
+      </ul>
+      <ul class="bullets">
+        <li><span class="icon">🪙</span><div><strong>Monetization Strategy</strong> — architect new revenue streams (BeastBet, sponsored markets, international expansion) backed by data models</div></li>
+        <li><span class="icon">📱</span><div><strong>Cross-Platform Intelligence</strong> — unify YouTube, Prime Video, and social signals into one view of audience behavior</div></li>
+        <li><span class="icon">🎯</span><div><strong>Adoption</strong> — target 80%+ insight adoption within 30 days of surfacing; if a dashboard insight isn't implemented, it doesn't count</div></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ── SLIDE 10: CTA ── -->
+  <div class="slide cover" id="s9">
+    <div class="bg-circle" style="width:600px;height:600px;background:#7c3aed;top:-150px;right:-150px;"></div>
+    <div class="bg-circle" style="width:400px;height:400px;background:#FFD700;bottom:-120px;left:-100px;"></div>
+    <div class="cover-badge">Let's Talk</div>
+    <h1 style="font-size:42px;">Data that moves<br>the needle.</h1>
+    <div class="cover-sub" style="max-width:480px;">
+      This dashboard is live. The data is real. The BeastBet concept is deployable.<br>
+      The Ops Loop framework is ready to run.
+    </div>
+    <div class="cta-links">
+      <a class="cta-btn gold-btn" href="https://gdtrader87.github.io/beast-games-analysis/" target="_blank">🪙 Live BeastBet Demo</a>
+      <a class="cta-btn primary" href="https://github.com/gdtrader87/beast-games-analysis" target="_blank">GitHub Repo</a>
+      <a class="cta-btn secondary" href="https://www.linkedin.com/in/umairtareen/" target="_blank">LinkedIn</a>
+    </div>
+    <div style="margin-top:28px;font-size:13px;color:var(--muted);">
+      Run locally: &nbsp;<code style="background:rgba(168,85,247,0.15);padding:4px 10px;border-radius:4px;color:var(--purple);">streamlit run dashboard.py</code>
+    </div>
+  </div>
+
+</div><!-- /deck -->
+
+<!-- Nav -->
+<div class="nav">
+  <button id="prevBtn" onclick="go(-1)" disabled>← Prev</button>
+  <span class="slide-counter" id="counter">1 / 10</span>
+  <button id="nextBtn" onclick="go(1)">Next →</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const total  = slides.length;
+  let cur = 0;
+
+  function go(dir) {
+    slides[cur].classList.remove('active');
+    slides[cur].classList.add('exit');
+    setTimeout(() => slides[cur].classList.remove('exit'), 450);
+    cur = Math.max(0, Math.min(total - 1, cur + dir));
+    slides[cur].classList.add('active');
+    document.getElementById('counter').textContent = `${cur + 1} / ${total}`;
+    document.getElementById('prevBtn').disabled = cur === 0;
+    document.getElementById('nextBtn').disabled = cur === total - 1;
+    document.getElementById('progress').style.width = `${((cur + 1) / total) * 100}%`;
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown')  go(1);
+    if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')    go(-1);
+  });
+
+  // Touch/swipe
+  let tx = 0;
+  document.addEventListener('touchstart', e => tx = e.touches[0].clientX);
+  document.addEventListener('touchend',   e => {
+    const dx = tx - e.changedTouches[0].clientX;
+    if (Math.abs(dx) > 50) go(dx > 0 ? 1 : -1);
+  });
+
+  // Init progress
+  document.getElementById('progress').style.width = `${(1 / total) * 100}%`;
+</script>
+</body>
+</html>
