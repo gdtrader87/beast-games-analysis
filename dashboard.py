@@ -805,10 +805,10 @@ with tab8:
     total_volume = sum(c["volume"] for c in CONTESTANTS)
 
     ticker_raw = (
-        " 🪙 BEASTBET — BEAST GAMES S2 LIVE  ·  "
-        + "  ·  ".join([f"{c['name']} ({c['label']}): {c['odds']:.2f}x" for c in CONTESTANTS])
-        + f"  ·  💰 TOTAL MARKET: ${total_volume:,}  ·  🏆 TOP TRADER: +$14,200 (beast_fan_99)"
-        + "  ·  📺 AMAZON PRIME VIDEO  ·  🎮 PLACE YOUR PREDICTION  "
+        " 🎮 BEASTBET — BEAST GAMES S3 FAN PREDICTION LEAGUE  ·  "
+        + "  ·  ".join([f"{c['name']} ({c['label']}): {c['odds']:.2f}x fan odds" for c in CONTESTANTS])
+        + f"  ·  🪙 TOKEN POOL: {total_volume:,} pts  ·  🏆 TOP PREDICTOR: beast_fan_99"
+        + "  ·  📺 AMAZON PRIME VIDEO  ·  🎯 PRIZE: FEASTABLES DROP + BEAST HQ TOUR  "
     )
     ticker_full = ticker_raw * 2
 
@@ -826,7 +826,7 @@ with tab8:
         </td>
         <td style="color:#00FF88; font-weight:bold;">{c['odds']:.2f}x</td>
         <td style="color:#FF6B6B;">{c['win_pct']}%</td>
-        <td style="color:#64B5F6;">${c['volume']:,}</td>
+        <td style="color:#64B5F6;">{c['volume']:,} pts</td>
         <td style="color:#FFB74D;">{c['bets']}</td>
         <td style="color:#888; font-size:10px;">{c['ep']}</td>
       </tr>"""
@@ -920,12 +920,12 @@ with tab8:
     </div>
     <div class="title-block">
       <div class="main-title">BEASTBET</div>
-      <div class="subtitle">⚡ POLYMARKET &times; BEAST GAMES ⚡</div>
-      <div class="season-tag">SEASON 2  &middot;  AMAZON PRIME VIDEO  &middot;  LIVE PREDICTION MARKET  &middot;  2026</div>
+      <div class="subtitle">⚡ BEAST GAMES 3  &middot;  FAN PREDICTION LEAGUE ⚡</div>
+      <div class="season-tag">SEASON 3  &middot;  AMAZON PRIME VIDEO  &middot;  FAN ENGAGEMENT CHALLENGE  &middot;  2026</div>
     </div>
     <div class="coin-block">
       <div class="coin coin-right"><img src="{mb_logo}" alt="MrBeast" /></div>
-      <div class="insert-coin" style="animation-delay:0.5s;">PLACE BET</div>
+      <div class="insert-coin" style="animation-delay:0.5s;">PREDICT NOW</div>
     </div>
   </div>
   <div class="ticker-wrap">
@@ -934,16 +934,16 @@ with tab8:
   <table>
     <thead>
       <tr>
-        <th>CONTESTANT</th><th>ODDS</th><th>WIN %</th>
-        <th>MARKET VOL</th><th>OPEN BETS</th><th>STATUS</th>
+        <th>CONTESTANT</th><th>FAN ODDS</th><th>WIN %</th>
+        <th>TOKEN POOL</th><th>PREDICTIONS</th><th>STATUS</th>
       </tr>
     </thead>
     <tbody>{rows_html}</tbody>
   </table>
   <div class="credits">
-    &#9733; &nbsp; CREDITS: 3 &nbsp; &middot; &nbsp;
-    TOP TRADER: beast_fan_99 (+$14,200) &nbsp; &middot; &nbsp;
-    MARKET CLOSES: EP 10 FINALE &nbsp; &#9733;
+    &#9733; &nbsp; SEASON PRIZE: FEASTABLES BUNDLE + BEAST HQ TOUR + BEAST PHILANTHROPY DONATION &nbsp; &#9733; &nbsp;
+    TOP PREDICTOR: beast_fan_99 &nbsp; &middot; &nbsp;
+    PREDICTIONS CLOSE: EP 10 FINALE &nbsp; &#9733;
   </div>
 </div>
 </body></html>"""
