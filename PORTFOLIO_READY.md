@@ -30,7 +30,7 @@ beast-games-analysis/
 
 ### Thumbnail Patterns
 - High-saturation primary colors (red, yellow, orange) dominate high-performing thumbnails
-- 80%+ colored area — minimal white space
+- 80%+ colored area minimal white space
 - Bottom-third text overlay: white text with drop shadow
 - Centered subject with high-energy facial expression
 - **Estimated impact: +35–45% CTR**
@@ -44,8 +44,8 @@ beast-games-analysis/
 
 ### Episode Arc
 - **Setup (0–5 min):** Establish stakes and introduce competitors — 95% retention target
-- **Competition (5–25 min):** Main content — critical drop-off risk at 15-minute mark
-- **Climax (25–30 min):** Payoff moment — 85% retention target
+- **Competition (5–25 min):** Main content critical drop-off risk at 15-minute mark
+- **Climax (25–30 min):** Payoff moment 85% retention target
 - **Resolution (30–32 min):** Winner reveal and engagement driver
 
 ### Upload Strategy
