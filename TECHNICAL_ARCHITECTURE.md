@@ -1,11 +1,11 @@
-# Technical Architecture — Beast Games Analytics System
+# Technical Architecture Beast Games Analytics System
 
 ## Executive Summary
 
 Analytics platform for Beast Industries' YouTube intelligence. Combines real-time data ingestion, A/B testing, predictive modeling, and competitive benchmarking to support data-informed content decisions.
 
 **Core capabilities:**
-- Real YouTube API integration — 471M+ subscriber channels
+- Real YouTube API integration 471M+ subscriber channels
 - Statistical A/B testing with significance testing
 - Predictive performance modeling — 92% accuracy
 - Competitive benchmarking against industry comparables
@@ -87,7 +87,7 @@ YouTubeDataFetcher
 
 **Reliability:**
 - Error handling for network failures
-- Graceful degradation — partial data returned if API partially fails
+- Graceful degradation partial data returned if API partially fails
 - Retry logic with exponential backoff
 
 ---
@@ -239,13 +239,13 @@ Significance level: α = 0.05
 
 ### 5. Visualization Layer
 
-#### `dashboard.py` — Strategy Explorer
+#### `dashboard.py` Strategy Explorer
 - 6 interactive tabs: thumbnails, titles, episode structure, guests, upload timing, predictions
 - Real-time metrics calculation
 - Performance predictor with scenario modeling
 - Engagement rate tracking
 
-#### `results_dashboard.py` — Results View
+#### `results_dashboard.py` Results View
 - Live YouTube data visualization
 - Channel comparison charts
 - Engagement metrics by video
@@ -279,7 +279,7 @@ Significance level: α = 0.05
 3. Analysis
    ab_testing.py
    ├─ classify_title_formula()
-   │  └─ "urgency_prize_stakes" — best performing category
+   │  └─ "urgency_prize_stakes" best performing category
    ├─ classify_thumbnails()
    │  └─ "bright_red" — +25% CTR vs baseline
    ├─ group_by_upload_timing()
@@ -339,7 +339,7 @@ Significance level: α = 0.05
 - Expand from 50 to 500 recent videos per channel
 - Add comment sentiment analysis via NLP
 - Implement pixel-level thumbnail feature extraction via computer vision
-- Switch to incremental updates — fetch only new videos since last run
+- Switch to incremental updates fetch only new videos since last run
 
 ### Phase 2: Advanced Modeling
 - LSTM time-series forecasting for trend prediction
@@ -426,7 +426,7 @@ Monitoring:    CloudWatch / Stackdriver
 ## Architecture Decisions
 
 ### Why a multiplicative model rather than linear regression?
-Content factors compound — title, thumbnail, timing, and guest presence represent sequential audience decision points, not additive influences. The multiplicative model better mirrors observed user behavior and fits the data more accurately: R² = 0.89 vs 0.71 for the linear alternative.
+Content factors compound title, thumbnail, timing, and guest presence represent sequential audience decision points, not additive influences. The multiplicative model better mirrors observed user behavior and fits the data more accurately: R² = 0.89 vs 0.71 for the linear alternative.
 
 ### Why local JSON rather than a database?
 For the current scale of 500+ videos, local JSON is sufficient. It is version-control compatible, human-readable, requires no infrastructure overhead, and costs nothing to operate. The transition path to PostgreSQL is straightforward when volume or multi-user access requires it.
@@ -443,12 +443,12 @@ At 150 videos, the dataset is below the threshold where deep learning provides a
 
 | Week | Milestone |
 |------|-----------|
-| 1 | Data pipeline deployed — `fetch_youtube_data.py` live |
+| 1 | Data pipeline deployed `fetch_youtube_data.py` live |
 | 2 | A/B test results validated against historical data |
 | 3 | Predictions integrated into content planning workflow |
 | 4 | Creative team training on dashboard interpretation |
 | 5 | A/B tests running on next 10 Beast Games episodes |
-| 6 | Actual vs. predicted reconciliation — model refinement |
+| 6 | Actual vs. predicted reconciliation model refinement |
 
 ---
 
