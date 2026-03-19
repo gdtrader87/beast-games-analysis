@@ -7,7 +7,7 @@ Analytics platform for Beast Industries' YouTube intelligence. Combines real-tim
 **Core capabilities:**
 - Real YouTube API integration 471M+ subscriber channels
 - Statistical A/B testing with significance testing
-- Predictive performance modeling — 92% accuracy
+- Predictive performance modeling 92% accuracy
 - Competitive benchmarking against industry comparables
 - Interactive dashboards for creative decision support
 
