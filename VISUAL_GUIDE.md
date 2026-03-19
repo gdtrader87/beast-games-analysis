@@ -1,4 +1,4 @@
-# Visual Guide — Beast Games Analytics System
+# Visual Guide Beast Games Analytics System
 
 A walkthrough of the repository structure, module functionality, and dashboard layout.
 
@@ -43,7 +43,7 @@ beast-games-analysis/
 ## Module Reference
 
 ### `beastbet_core.py` (19 KB)
-Prediction market engine — odds calculation, bet placement, settlement, and revenue tracking.
+Prediction market engine odds calculation, bet placement, settlement, and revenue tracking.
 
 ```python
 class PredictionMarket:
@@ -214,7 +214,7 @@ class StatisticalFramework:
 ---
 
 ### `fetch_youtube_data.py` (8.7 KB)
-YouTube Data API v3 integration — fetches and caches real channel metrics.
+YouTube Data API v3 integration fetches and caches real channel metrics.
 
 ```python
 def fetch_beast_games_metrics():
@@ -246,7 +246,7 @@ st.title("Beast Games Strategy Explorer")
 ---
 
 ### `results_dashboard.py` (9.9 KB)
-Visualizes real analysis output — performance metrics, CTR by episode, title formula impact, guest multiplier analysis.
+Visualizes real analysis output performance metrics, CTR by episode, title formula impact, guest multiplier analysis.
 
 ---
 
