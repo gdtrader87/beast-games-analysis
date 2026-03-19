@@ -1,5 +1,5 @@
 # 90-Day Implementation Playbook
-## Head of Analytics — Beast Industries
+## Head of Analytics Beast Industries
 
 ---
 
@@ -23,7 +23,7 @@
 **Day 1**
 
 Morning:
-- [ ] CEO alignment meeting (30 min) — establish priorities, confirm success metrics
+- [ ] CEO alignment meeting (30 min) establish priorities, confirm success metrics
 - [ ] Review current team structure and key stakeholders
 - [ ] Gain access to YouTube analytics, production data, and financial systems
 
@@ -33,11 +33,11 @@ Afternoon:
   - Head of Production
   - Head of Business Development
 - [ ] Key question for each: "Where are the biggest gaps analytics could close?"
-- [ ] Document pain points — these become the near-term roadmap
+- [ ] Document pain points these become the near-term roadmap
 
 Evening:
 - [ ] Send CEO a brief day-one summary: observations and initial priorities
-- [ ] Configure workspace — GitHub, data pipelines, tooling
+- [ ] Configure workspace GitHub, data pipelines, tooling
 - [ ] Schedule recurring cadences: biweekly with CEO, weekly with team leads
 
 ---
@@ -68,7 +68,7 @@ Evening:
 
 **Days 8–10: Team Hiring**
 
-- [ ] Identify 2 Senior Data Scientists — prioritize internal promotion before external search
+- [ ] Identify 2 Senior Data Scientists prioritize internal promotion before external search
 - [ ] Identify 1–2 Analytics Engineers or contractors
 - [ ] Conduct conversations, align on scope and expectations
 
@@ -84,7 +84,7 @@ Target competencies:
 **Days 11–14: Cost Reduction Initiative**
 
 - [ ] Audit all in-production projects against model performance predictions
-- [ ] Flag bottom 15% of pipeline — categorize as "high cost, low predicted return"
+- [ ] Flag bottom 15% of pipeline categorize as "high cost, low predicted return"
 - [ ] Quantify savings opportunity per flagged project
 - [ ] Present findings to CEO and Head of Production
 
@@ -169,7 +169,7 @@ Running in parallel:
 
 **Agenda (30 minutes):**
 1. Model accuracy: 92%, validated on internal data
-2. Cost opportunity: $2.3M/month identified — plan to capture
+2. Cost opportunity: $2.3M/month identified plan to capture
 3. Revenue opportunity: +$600M/year from guest strategy alone
 4. A/B test early signal: Title formula showing +35% lift
 5. Team: 2 Senior Data Scientists onboarded, starting Week 5
@@ -214,7 +214,7 @@ Running in parallel:
 
 **Days 41–45: International Expansion Analysis**
 
-- [ ] 60% of current audience is outside the US — quantify by market:
+- [ ] 60% of current audience is outside the US quantify by market:
   - India: 200M addressable viewers
   - Brazil: 120M addressable
   - Spanish-speaking markets: 150M addressable
@@ -222,7 +222,7 @@ Running in parallel:
 
 - [ ] Localization strategy per market:
   - Dubbed versions (Spanish, Hindi, Portuguese, Mandarin)
-  - Regional casting — local talent with verifiable audience overlap
+  - Regional casting local talent with verifiable audience overlap
   - Localized prizes calibrated to market purchasing power
 
 - [ ] Financial model:
@@ -348,7 +348,7 @@ The Senior Data Scientists are now operational. Primary build focus:
 
 90 days of internal data enables more sophisticated analysis:
 
-- [ ] Multivariate regression — quantify contribution by factor:
+- [ ] Multivariate regression quantify contribution by factor:
   - Title: ~35% of view variance explained
   - Thumbnail: ~15%
   - Guest: ~25%
@@ -370,7 +370,7 @@ The Senior Data Scientists are now operational. Primary build focus:
 **Days 81–85: Team Expansion**
 
 - [ ] Hire 1–2 additional Analytics Engineers
-- [ ] Hire 2 Content Analysts — dedicated to audience intelligence
+- [ ] Hire 2 Content Analysts dedicated to audience intelligence
 - [ ] Formalize team operating model: weekly standups, monthly deep dives, quarterly strategy reviews
 - [ ] Document all models, processes, and decision frameworks — institutional knowledge is a deliverable, not a byproduct
 
@@ -475,14 +475,14 @@ The Senior Data Scientists are now operational. Primary build focus:
 ## Risk and Contingency Planning
 
 ### Model Accuracy Drops Below 90%
-- Suspend greenlight recommendations — use model for directional insight only
+- Suspend greenlight recommendations use model for directional insight only
 - Diagnose drift: market shift, audience composition change, format change
 - Retrain on most recent 50 videos
 - Introduce new variables if the gap isn't explained by existing features
 - Resolution timeline: 1–2 weeks
 
 ### Team Performance Issue
-- Direct feedback in week one of identifying the issue — specific and documented
+- Direct feedback in week one of identifying the issue specific and documented
 - 30-day improvement plan with measurable targets
 - Decision at 60 days: keep, reassign, or part ways
 - Address quickly — team dysfunction compounds
