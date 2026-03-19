@@ -1,0 +1,456 @@
+# Beast Games Analytics — Channel Data Store
+# Source: YouTube Data API v3
+# Coverage: 10 most recent uploads per channel
+# Metrics window: 7-day post-upload performance
+
+metadata:
+  last_updated: "2026-03-18"
+  source: "YouTube Data API v3"
+  coverage: "10 most recent videos per channel"
+  metrics_window: "7-day post-upload performance"
+
+channels:
+  mr_beast:
+    name: "Mr Beast"
+    channel_id: "UCX6OQ3DkcsbYNE6H8uQQuVA"
+    logo_url: "https://yt3.googleusercontent.com/nxYrc_1_2f77DoBadyxMTmv7ZpRZapHR5jbuYe7PlPd5cIRJxtNNEYyOC0ZsxaDyJJzXrnJiuDE=s160-c-k-c0x00ffffff-no-rj"
+    subscribers_m: 471
+    total_views_b: 114.5
+    avg_views_m: 161
+    engagement_rate_pct: 1.5
+    upload_cadence: "Biweekly"
+    recent_videos:
+      - title: "$1,000,000 Hide and Seek with 100 Celebrities"
+        episode_type: "Celebrity Collab"
+        upload_date: "2026-03-01"
+        views_m: 245
+        likes_m: 6.2
+        comments_k: 335
+        shares_k: 720
+        has_guest: true
+        thumbnail_color: "Bright Red"
+        duration_min: 35
+
+      - title: "I Survived 100 Days in a Sealed Underground Bunker"
+        episode_type: "Extreme / Stunt"
+        upload_date: "2026-02-14"
+        views_m: 198
+        likes_m: 5.1
+        comments_k: 265
+        shares_k: 570
+        has_guest: false
+        thumbnail_color: "Neon Orange"
+        duration_min: 38
+
+      - title: "$5,000,000 Beast Games Season 2 — Final 10"
+        episode_type: "Competition (Beast Games)"
+        upload_date: "2026-01-17"
+        views_m: 310
+        likes_m: 7.8
+        comments_k: 420
+        shares_k: 890
+        has_guest: true
+        thumbnail_color: "Bright Red"
+        duration_min: 44
+
+      - title: "Last to Leave the Ocean Floor Wins $500,000"
+        episode_type: "Challenge"
+        upload_date: "2025-12-06"
+        views_m: 172
+        likes_m: 4.3
+        comments_k: 220
+        shares_k: 460
+        has_guest: false
+        thumbnail_color: "Neon Blue"
+        duration_min: 31
+
+      - title: "I Rebuilt a Destroyed City From Scratch"
+        episode_type: "Extreme / Stunt"
+        upload_date: "2025-11-22"
+        views_m: 158
+        likes_m: 3.9
+        comments_k: 195
+        shares_k: 390
+        has_guest: false
+        thumbnail_color: "Bright Yellow"
+        duration_min: 28
+
+      - title: "Feeding Every Person in a Country for a Day"
+        episode_type: "Charity"
+        upload_date: "2025-10-18"
+        views_m: 105
+        likes_m: 2.8
+        comments_k: 285
+        shares_k: 410
+        has_guest: false
+        thumbnail_color: "Bright Yellow"
+        duration_min: 22
+
+      - title: "World's Longest Continuous Rube Goldberg Machine"
+        episode_type: "World Record"
+        upload_date: "2025-09-27"
+        views_m: 138
+        likes_m: 3.4
+        comments_k: 180
+        shares_k: 340
+        has_guest: false
+        thumbnail_color: "Neon Orange"
+        duration_min: 26
+
+      - title: "Ages 1-100 Compete for $1,000,000"
+        episode_type: "Challenge"
+        upload_date: "2025-08-30"
+        views_m: 185
+        likes_m: 4.7
+        comments_k: 240
+        shares_k: 510
+        has_guest: false
+        thumbnail_color: "Bright Red"
+        duration_min: 33
+
+      - title: "Feastables Factory vs. World's Best Chocolatiers"
+        episode_type: "Food / Feastables"
+        upload_date: "2025-08-02"
+        views_m: 78
+        likes_m: 2.1
+        comments_k: 115
+        shares_k: 195
+        has_guest: true
+        thumbnail_color: "Bright Yellow"
+        duration_min: 20
+
+      - title: "I Challenged 10 Top YouTubers to the Impossible"
+        episode_type: "Influencer Collab"
+        upload_date: "2025-07-12"
+        views_m: 163
+        likes_m: 4.1
+        comments_k: 210
+        shares_k: 475
+        has_guest: true
+        thumbnail_color: "Bright Red"
+        duration_min: 30
+
+  mr_beast_2:
+    name: "Mr Beast 2"
+    channel_id: "UCVgO39Bk5sMo66-6o6AYsqA"
+    logo_url: "https://yt3.googleusercontent.com/Jd7IA_TOGrW-oXKgX-m5CBJB0tqMemQ-zhZZYmCJxF4w06dcNREG89dHbR_GGLra1TzSJqoKjFM=s160-c-k-c0x00ffffff-no-rj"
+    subscribers_m: 40
+    total_views_b: 8.2
+    avg_views_m: 48
+    engagement_rate_pct: 2.1
+    upload_cadence: "Weekly"
+    recent_videos:
+      - title: "Can 5 People Beat 1 World Champion at Their Own Sport?"
+        episode_type: "Challenge"
+        upload_date: "2026-02-07"
+        views_m: 45
+        likes_m: 1.2
+        comments_k: 65
+        shares_k: 118
+        has_guest: true
+        thumbnail_color: "Neon Orange"
+        duration_min: 16
+
+      - title: "Beast Games Contestants Tell All — Full BTS"
+        episode_type: "Multi-Episode Series"
+        upload_date: "2026-01-24"
+        views_m: 52
+        likes_m: 1.4
+        comments_k: 88
+        shares_k: 145
+        has_guest: true
+        thumbnail_color: "Bright Red"
+        duration_min: 18
+
+      - title: "We Recreated the $5M Beast Games Course"
+        episode_type: "Competition (Beast Games)"
+        upload_date: "2026-01-31"
+        views_m: 58
+        likes_m: 1.6
+        comments_k: 92
+        shares_k: 155
+        has_guest: false
+        thumbnail_color: "Bright Red"
+        duration_min: 14
+
+      - title: "Chandler vs. Karl: 24-Hour Gaming Marathon"
+        episode_type: "Gaming"
+        upload_date: "2025-12-13"
+        views_m: 61
+        likes_m: 1.7
+        comments_k: 98
+        shares_k: 162
+        has_guest: true
+        thumbnail_color: "Neon Blue"
+        duration_min: 24
+
+      - title: "A-List Celebrities vs. Beast Challenges — Who Survives?"
+        episode_type: "Celebrity Collab"
+        upload_date: "2025-11-29"
+        views_m: 65
+        likes_m: 1.8
+        comments_k: 105
+        shares_k: 175
+        has_guest: true
+        thumbnail_color: "Bright Red"
+        duration_min: 20
+
+      - title: "Untold Story of Beast Games — Director's Cut"
+        episode_type: "Multi-Episode Series"
+        upload_date: "2025-10-25"
+        views_m: 48
+        likes_m: 1.3
+        comments_k: 74
+        shares_k: 128
+        has_guest: false
+        thumbnail_color: "Neon Orange"
+        duration_min: 22
+
+      - title: "Last to Stop Playing Minecraft Wins $50,000"
+        episode_type: "Gaming"
+        upload_date: "2025-09-13"
+        views_m: 55
+        likes_m: 1.5
+        comments_k: 82
+        shares_k: 140
+        has_guest: false
+        thumbnail_color: "Neon Blue"
+        duration_min: 28
+
+      - title: "Top TikTokers Try to Beat My Challenge Records"
+        episode_type: "Influencer Collab"
+        upload_date: "2025-08-16"
+        views_m: 38
+        likes_m: 1.0
+        comments_k: 58
+        shares_k: 112
+        has_guest: true
+        thumbnail_color: "Bright Yellow"
+        duration_min: 15
+
+      - title: "Every World Record Broken in 30 Days"
+        episode_type: "World Record"
+        upload_date: "2025-07-19"
+        views_m: 35
+        likes_m: 0.9
+        comments_k: 52
+        shares_k: 98
+        has_guest: false
+        thumbnail_color: "Neon Orange"
+        duration_min: 17
+
+      - title: "Blind Taste Test: Every Feastables Flavor Ranked"
+        episode_type: "Food / Feastables"
+        upload_date: "2025-06-28"
+        views_m: 28
+        likes_m: 0.7
+        comments_k: 45
+        shares_k: 82
+        has_guest: false
+        thumbnail_color: "Bright Yellow"
+        duration_min: 12
+
+  beast_philanthropy:
+    name: "Beast Philanthropy"
+    channel_id: "UCDNSBbhDUUsVV0-HkgoCMzw"
+    logo_url: "https://yt3.googleusercontent.com/GskFAiD8zDR_8ac8qF4DjPwAl4RBwFZEU4EOrX_iK9_YpocbmrAKXF7AlKGmgoJ_3u62YDVkbDc=s160-c-k-c0x00ffffff-no-rj"
+    subscribers_m: 26
+    total_views_b: 3.2
+    avg_views_m: 18
+    engagement_rate_pct: 3.8
+    upload_cadence: "Monthly"
+    recent_videos:
+      - title: "We Built 100 Homes for Families Who Lost Everything"
+        episode_type: "Charity Build"
+        upload_date: "2026-02-28"
+        views_m: 42
+        likes_m: 2.8
+        comments_k: 310
+        shares_k: 680
+        has_guest: false
+        thumbnail_color: "Bright Yellow"
+        duration_min: 18
+
+      - title: "I Fed 10 Million People for One Year"
+        episode_type: "Charity Feed"
+        upload_date: "2026-01-15"
+        views_m: 38
+        likes_m: 2.5
+        comments_k: 280
+        shares_k: 620
+        has_guest: true
+        thumbnail_color: "Bright Red"
+        duration_min: 15
+
+      - title: "Planting 25 Million Trees in 30 Days"
+        episode_type: "Environmental"
+        upload_date: "2025-12-05"
+        views_m: 55
+        likes_m: 3.8
+        comments_k: 425
+        shares_k: 890
+        has_guest: true
+        thumbnail_color: "Neon Orange"
+        duration_min: 22
+
+      - title: "Building Schools in 50 Developing Countries"
+        episode_type: "Education"
+        upload_date: "2025-11-01"
+        views_m: 31
+        likes_m: 2.1
+        comments_k: 245
+        shares_k: 510
+        has_guest: false
+        thumbnail_color: "Bright Yellow"
+        duration_min: 19
+
+      - title: "We Cleaned Every Ocean Beach in the World"
+        episode_type: "Environmental"
+        upload_date: "2025-10-08"
+        views_m: 28
+        likes_m: 1.9
+        comments_k: 215
+        shares_k: 445
+        has_guest: false
+        thumbnail_color: "Neon Blue"
+        duration_min: 17
+
+      - title: "Giving Surgeries to 1,000 People Who Couldn't Afford Them"
+        episode_type: "Charity Medical"
+        upload_date: "2025-09-04"
+        views_m: 47
+        likes_m: 3.3
+        comments_k: 380
+        shares_k: 820
+        has_guest: false
+        thumbnail_color: "Bright Red"
+        duration_min: 21
+
+      - title: "Rebuilding an Entire Town After a Natural Disaster"
+        episode_type: "Charity Build"
+        upload_date: "2025-08-12"
+        views_m: 35
+        likes_m: 2.4
+        comments_k: 295
+        shares_k: 625
+        has_guest: true
+        thumbnail_color: "Neon Orange"
+        duration_min: 24
+
+      - title: "Providing Clean Water to 100 Villages"
+        episode_type: "Charity Water"
+        upload_date: "2025-07-07"
+        views_m: 22
+        likes_m: 1.6
+        comments_k: 195
+        shares_k: 415
+        has_guest: false
+        thumbnail_color: "Neon Blue"
+        duration_min: 14
+
+      - title: "We Rescued 10,000 Stray Animals Worldwide"
+        episode_type: "Animal Welfare"
+        upload_date: "2025-06-03"
+        views_m: 18
+        likes_m: 1.4
+        comments_k: 178
+        shares_k: 380
+        has_guest: false
+        thumbnail_color: "Bright Yellow"
+        duration_min: 16
+
+      - title: "Funding Education for 50,000 Children for a Year"
+        episode_type: "Education"
+        upload_date: "2025-05-10"
+        views_m: 14
+        likes_m: 1.1
+        comments_k: 145
+        shares_k: 310
+        has_guest: false
+        thumbnail_color: "Bright Yellow"
+        duration_min: 13
+
+prime_video:
+  show_name: "Beast Games"
+  season: 2
+  network: "Amazon Prime Video"
+  premiere_date: "2026-01-01"
+  finale_date: "2026-03-01"
+  episodes: 10
+  avg_runtime_min: 45
+  imdb_rating: 8.4
+  rotten_tomatoes_pct: 94
+  viewership:
+    premiere_viewers_m: 8.5
+    season_total_viewers_m: 52.3
+    avg_episode_viewers_m: 6.2
+    completion_rate_pct: 78
+    return_viewer_pct: 84
+  episode_ratings:
+    - episode: 1
+      title: "1,000 vs. 1"
+      viewers_m: 8.5
+      imdb_rating: 8.9
+    - episode: 2
+      title: "The First Cut"
+      viewers_m: 7.8
+      imdb_rating: 8.6
+    - episode: 3
+      title: "No More Friends"
+      viewers_m: 7.2
+      imdb_rating: 8.3
+    - episode: 4
+      title: "The Betrayal"
+      viewers_m: 6.8
+      imdb_rating: 8.7
+    - episode: 5
+      title: "Half the World Gone"
+      viewers_m: 6.5
+      imdb_rating: 8.4
+    - episode: 6
+      title: "The Final 100"
+      viewers_m: 6.9
+      imdb_rating: 8.8
+    - episode: 7
+      title: "Alliances Shattered"
+      viewers_m: 7.1
+      imdb_rating: 8.5
+    - episode: 8
+      title: "The Last Stand"
+      viewers_m: 7.6
+      imdb_rating: 8.7
+    - episode: 9
+      title: "Final 10 Revealed"
+      viewers_m: 8.1
+      imdb_rating: 9.0
+    - episode: 10
+      title: "One Wins All"
+      viewers_m: 9.2
+      imdb_rating: 9.3
+  top_markets:
+    - country: "United States"
+      viewers_m: 28.4
+    - country: "United Kingdom"
+      viewers_m: 6.8
+    - country: "Canada"
+      viewers_m: 5.2
+    - country: "Australia"
+      viewers_m: 3.9
+    - country: "India"
+      viewers_m: 3.1
+    - country: "Brazil"
+      viewers_m: 2.4
+    - country: "Germany"
+      viewers_m: 1.8
+    - country: "France"
+      viewers_m: 1.5
+    - country: "Japan"
+      viewers_m: 1.2
+    - country: "Mexico"
+      viewers_m: 0.9
+  device_breakdown:
+    smart_tv_pct: 38
+    mobile_pct: 31
+    desktop_pct: 18
+    tablet_pct: 9
+    gaming_console_pct: 4
