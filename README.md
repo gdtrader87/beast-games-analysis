@@ -4,9 +4,7 @@
 
 # Beast Games Analytics Portfolio
 
-# Beast Games YouTube Analytics Portfolio
-
-**Analyst:** Umair Tareen | [LinkedIn](https://www.linkedin.com/in/umairtareen/) | [GitHub](https://github.com/gdtrader87)
+**Senior Manager, YouTube Intelligence:** Umair Tareen | [LinkedIn](https://www.linkedin.com/in/umairtareen/) | [GitHub](https://github.com/gdtrader87)
 
 ---
 
