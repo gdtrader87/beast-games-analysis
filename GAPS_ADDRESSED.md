@@ -1,6 +1,6 @@
 # Capability Overview: Analytics Leadership at Beast Industries
 
-A structured breakdown of the technical, operational, and leadership competencies demonstrated in this portfolio — mapped to the requirements of the Head of Analytics role.
+A structured breakdown of the technical, operational, and leadership competencies demonstrated in this portfolio mapped to the requirements of the Head of Analytics role.
 
 ---
 
@@ -99,12 +99,12 @@ All open at `http://localhost:8501`. No additional configuration required.
 ### Management Approach
 
 **Set expectations upfront**
-- Define success metrics before work begins — model accuracy targets, dashboard latency thresholds, reporting cadences
+- Define success metrics before work begins model accuracy targets, dashboard latency thresholds, reporting cadences
 - Assign clear ownership: each analyst owns a specific domain (e.g., title performance, thumbnail analysis)
 - Weekly 1:1s to track progress and surface blockers early
 
 **Lead by example**
-- Remain hands-on on high-priority analysis — not purely delegating
+- Remain hands-on on high-priority analysis not purely delegating
 - Review work substantively, not as rubber-stamping
 - Stay close to the hardest technical problems
 
@@ -114,7 +114,7 @@ All open at `http://localhost:8501`. No additional configuration required.
 - Monthly review: OKR performance and growth planning
 
 **Invest in development**
-- Pair analysts with executive-facing work early — seeing how analysis influences decisions accelerates judgment
+- Pair analysts with executive-facing work early seeing how analysis influences decisions accelerates judgment
 - Promote from within based on demonstrated output
 - Budget allocated for coursework and conferences in the Year 1 team plan
 
@@ -143,9 +143,9 @@ The `90_DAY_IMPLEMENTATION_PLAYBOOK.md` details the operating model. In summary:
 
 **Week 1:** Structured 1:1s with Head of YouTube/Platform, Head of Production, and Head of Business Development. Opening question for each: "Where are the gaps analytics could close?" Pain points become the near-term roadmap.
 
-**Week 3:** First recommendations delivered to the content team — specific, actionable, tied to measurable outcomes. Not a report; a brief with a recommendation and a hypothesis to test.
+**Week 3:** First recommendations delivered to the content team specific, actionable, tied to measurable outcomes. Not a report; a brief with a recommendation and a hypothesis to test.
 
-**Week 4:** Cost optimization findings presented to CEO and Head of Production — collaborative framing, not a unilateral analysis drop.
+**Week 4:** Cost optimization findings presented to CEO and Head of Production collaborative framing, not a unilateral analysis drop.
 
 ### Collaboration Examples
 
