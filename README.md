@@ -1,6 +1,6 @@
 ## 🪙 [▶ Live BeastBet Demo](https://gdtrader87.github.io/beast-games-analysis/)
 
-> Polymarket × Beast Games prediction market concept — click to see the live arcade UI
+> Polymarket × Beast Games prediction market concept <-- click to see the live arcade UI
 
 # Beast Games Analytics Portfolio
 
@@ -136,7 +136,7 @@ beast-games-analysis/
 
 ## Dashboard Preview
 
-*Streamlit dashboard in development — tracks CTR, AVD, upload cadence, and thumbnail scoring across the Beast Games series.*
+*Streamlit dashboard in development tracks CTR, AVD, upload cadence, and thumbnail scoring across the Beast Games series.*
 
 ---
 
