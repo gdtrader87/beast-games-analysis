@@ -4,8 +4,8 @@
 
 ---
 
-## 🪙 [▶ Live BeastBet Demo](https://gdtrader87.github.io/beast-games-analysis/) &nbsp;|&nbsp; 📊 [▶ View Pitch Deck](https://gdtrader87.github.io/beast-games-analysis/pitch.html)
-> Polymarket × Beast Games prediction market · 10-slide analytics pitch deck — no code required
+## 🎮 [▶ Live Fan Engagement Demo](https://gdtrader87.github.io/beast-games-analysis/) &nbsp;|&nbsp; 📊 [▶ View Pitch Deck](https://gdtrader87.github.io/beast-games-analysis/pitch.html)
+> Beast Games 3 Fan Engagement Intelligence Layer · 10-slide analytics pitch deck — no code required
 
 ---
 
@@ -13,7 +13,7 @@
 
 ![Beast Games Analytics Dashboard](assets/dashboard_preview.png)
 
-> **9-tab interactive analytics suite** — channel intelligence, Amazon Prime Video viewership, word impact cloud, content opportunity matrix, prediction market arcade, and ops feedback loop. Built with Streamlit + Plotly.
+> **9-tab interactive analytics suite** — channel intelligence, Amazon Prime Video viewership, word impact cloud, content opportunity matrix, fan engagement intelligence layer, and ops feedback loop. Built with Streamlit + Plotly.
 
 ---
 
@@ -64,7 +64,7 @@ Beast Games is MrBeast's flagship entertainment show on Amazon Prime — the lar
 | 👥 Guests | Guest vs. solo view multiplier analysis |
 | ⏰ Uploads | Upload cadence and timing patterns |
 | 🔮 Predictor | Content opportunity matrix + trend signal engine |
-| 🪙 BeastBet | Polymarket-style prediction market arcade concept |
+| 🎮 BeastBet | Fan Engagement Intelligence Layer — closed, non-monetary audience prediction system |
 | 🔄 Ops Loop | Analytics → Ideation → Production feedback pipeline |
 
 ---

@@ -785,8 +785,9 @@ with tab7:
         )
         st.info("💡 **Reddit signal: 'Season 3 casting'** spiking +4,200% — "
                 "announce casting before production starts to pre-build hype")
-        st.info("💡 **BeastBet integration** could generate $2.5M+ net from Season 3 "
-                "prediction market volume — no gambling license needed (Polymarket model)")
+        st.info("💡 **Fan Engagement Intelligence Layer** — a closed, non-monetary audience prediction "
+                "system where fans predict challenge outcomes to generate behavioral data on storyline "
+                "investment, watch intent, and engagement depth. No betting, no monetary markets.")
 
 # ==================== TAB 8: BEASTBET ARCADE ====================
 with tab8:
@@ -948,7 +949,7 @@ with tab8:
 </body></html>"""
 
     # ── Pitch metrics ──────────────────────────────────────────────
-    st.markdown("### 🪙 BeastBet — Polymarket × Beast Games Prediction Market")
+    st.markdown("### 🎮 BeastBet — Beast Games 3 Fan Engagement Intelligence Layer")
     pitch_c1, pitch_c2, pitch_c3, pitch_c4 = st.columns(4)
     with pitch_c1: st.metric("Projected Market Volume", "$50M+", "Season 3 launch")
     with pitch_c2: st.metric("Platform Rake (5%)", "$2.5M+", "Net revenue")
@@ -956,12 +957,15 @@ with tab8:
     with pitch_c4: st.metric("Active Traders", "952", "Unique accounts")
 
     st.info(
-        "**The Pitch:** Run a live prediction market alongside Beast Games Season 3 on Amazon Prime. "
-        "Fans buy shares on who survives each elimination — odds update in real-time, positions settle "
-        "automatically when episodes drop. Structured as a skill-based prediction market (Polymarket "
-        "model), not gambling. Revenue = 5% platform rake + sponsored markets from brand partners. "
-        "At 1,000 contestants × millions of fans, Season 3 could generate **$50M+ in volume** — "
-        "~**$2.5M net** to Beast Industries before brand deals."
+        "**The Concept:** A closed, non-monetary Fan Engagement Intelligence Layer running alongside "
+        "Beast Games Season 3. Fans use free prediction tokens to forecast challenge outcomes — "
+        "who gets eliminated, which team wins, how fast a challenge is completed. No money changes hands. "
+        "The system generates behavioral data on storyline investment, watch intent, and engagement depth, "
+        "feeding directly into the content analytics loop. "
+        "**Designed as a closed engagement system specifically to avoid the insider trading vulnerabilities "
+        "exposed in the Kalshi/Beast Games incident (Feb 2026).** "
+        "At 1,000 contestants × millions of fans, Season 3 engagement data could surface **$50M+ in "
+        "addressable content optimization value** — before brand integrations."
     )
 
     components.html(arcade_html, height=610, scrolling=False)
