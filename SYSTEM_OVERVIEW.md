@@ -1,6 +1,6 @@
 # Beast Games Analytics — System Overview
 
-A data-driven content strategy system for Beast Industries that predicts video performance before launch, identifies optimization opportunities across title, thumbnail, and timing, and benchmarks channel performance against competitors — all grounded in real YouTube data.
+A data-driven content strategy system for Beast Industries that predicts video performance before launch, identifies optimization opportunities across title, thumbnail, and timing, and benchmarks channel performance against competitors all grounded in real YouTube data.
 
 ---
 
@@ -164,7 +164,7 @@ Guest:            2.5x  →  281M (compounded)
 ## Capability Mapping
 
 ### Predictive Analytics
-- Pre-launch video performance prediction — 92% accuracy
+- Pre-launch video performance prediction 92% accuracy
 - Multiplicative factor model — R² = 0.89
 - T-tests and chi-square tests for statistical significance (p < 0.05)
 - 95% confidence intervals throughout
@@ -177,9 +177,9 @@ Guest:            2.5x  →  281M (compounded)
 - Production-grade deployment configuration
 
 ### Analytics Infrastructure
-- Real YouTube API integration — no synthetic data
+- Real YouTube API integration no synthetic data
 - 114.5B views analyzed across 952 videos
-- Competitive benchmarking framework — 283% quantified advantage vs nearest competitor
+- Competitive benchmarking framework 283% quantified advantage vs nearest competitor
 - Interactive dashboards via Streamlit and Plotly
 
 ---
