@@ -1,10 +1,10 @@
 # BeastBet Live: Prediction Markets for Beast Games
 
-A technical framework and execution plan for introducing prediction markets to Beast Games — quantifying the opportunity and delivering a production-ready system.
+A technical framework and execution plan for introducing prediction markets to Beast Games quantifying the opportunity and delivering a production-ready system.
 
 ## Market Analysis: The Gap
 
-Beast Games reaches 400M viewers weekly. Those viewers are **passive consumers** — they watch, react, and move on. The monetization ceiling on passive consumption is well-documented and comparatively low:
+Beast Games reaches 400M viewers weekly. Those viewers are **passive consumers** they watch, react, and move on. The monetization ceiling on passive consumption is well-documented and comparatively low:
 
 - Twitch viewers spend $15–50/month on subscriptions and bits
 - Sports bettors wager $150B+ annually in the US alone
@@ -22,7 +22,7 @@ A **real-time prediction market** enabling viewers to bet on Beast Games outcome
 - **Micro-bets** ($1–100) on instant outcomes ("Will MrBeast complete this challenge in 30 seconds?")
 - **Aggregate betting pools** for season-long predictions
 - **Instant payouts** to correct predictors (within 24h)
-- **Creator integration** — channel hosts earn a revenue share
+- **Creator integration** channel hosts earn a revenue share
 
 ### Why This Works
 
@@ -51,7 +51,7 @@ A **real-time prediction market** enabling viewers to bet on Beast Games outcome
 |----------|---------|-------|
 | DraftKings (sports betting) | $1.2B | 8M |
 | Polymarket (prediction market) | $1B+ assets | 300K active |
-| Beast Games (addressable base) | — | 400M viewers → 10–20M likely users |
+| Beast Games (addressable base) | 400M viewers → 10–20M likely users |
 
 **TAM: $300M–500M annually** at the intersection of creator economy and prediction markets.
 
@@ -155,9 +155,9 @@ The revenue model is validated by adjacent markets. DraftKings proved sports fan
 
 ## Go-to-Market Timeline
 
-1. **Weeks 1–2:** Controlled launch with 10 anchor creators — data collection and product validation
+1. **Weeks 1–2:** Controlled launch with 10 anchor creators data collection and product validation
 2. **Weeks 3–4:** Press distribution and influencer partnership activation
-3. **Month 2:** Full creator rollout — widget embedded on 500+ channels
+3. **Month 2:** Full creator rollout widget embedded on 500+ channels
 4. **Month 3:** International expansion and sustained press coverage
 
 **Six-month milestone: 1M users, $100M betting volume.**
@@ -168,10 +168,10 @@ The revenue model is validated by adjacent markets. DraftKings proved sports fan
 
 The conditions for this to work exist now and are time-bounded:
 
-1. Prediction markets are entering mainstream — Polymarket and Kalshi have established regulatory viability
-2. The creator economy is at peak scale — $100B+ industry, 200M+ active creators globally
-3. Beast Games provides a ready-made audience — 400M viewers is a distribution advantage no competitor can replicate
-4. Fintech and crypto infrastructure has normalized digital payments — the friction that blocked this five years ago is gone
-5. Platform engagement metrics are declining across social — prediction markets are a proven re-engagement mechanism
+1. Prediction markets are entering mainstream Polymarket and Kalshi have established regulatory viability
+2. The creator economy is at peak scale $100B+ industry, 200M+ active creators globally
+3. Beast Games provides a ready-made audience 400M viewers is a distribution advantage no competitor can replicate
+4. Fintech and crypto infrastructure has normalized digital payments the friction that blocked this five years ago is gone
+5. Platform engagement metrics are declining across social prediction markets are a proven re-engagement mechanism
 
 **The category window is 5–10 years. First-mover captures the vertical.**
